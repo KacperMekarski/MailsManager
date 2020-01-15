@@ -1,0 +1,140 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1NzQ2MTM0NzcsImlhdCI6MTU3NDYxMzM1Nywic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.PRHgZnZ1V12ewrwtFhS2-_dkw8KHON87Lqswycc2GXRw0xxr8pmh7Sx3Goo7EmdwI1TXc8xQCS8LK_KB9GkC-sLEuQMGftBL9MbRIkESGLWVcoBQ0uZ7UzlhlEup-yZ50fLlU4tN3epRnX-QtExhMkLrlb48TFw6EGopGXTXf9AhWgtawyzodpKUBVMxf4URFeyVOY5itdsSqKyuG0--gmjsMSQW5gFLz9H8HsaqhTkhtU2SBdvfsG9yo34caGit5D0Xa9qKj-QBrPy1iGd4m9XG-KJzS4_AQIMVOxsrFdZgWIiDSmJtL1qoAOtkq9lCYClh1H3HTU242y8TT9_0pw
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 24 Nov 2019 16:36:57 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl6yB7yu_-BtQHeyy4MifDjh3-TW0cgj3KY2EKTwZ4dKPdEBJ6fnVf3jbLyV-uvZQmk0v-QGcuCTBl10T8hQLMGa51GLVarkoJZ1dn3QEi41TBNHFq1H9kUZJ38AcRAV",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:36:57 GMT
+- request:
+    method: get
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4/values/test123
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.5 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 24 Nov 2019 16:36:57 GMT
+      Authorization:
+      - Bearer ya29.c.Kl6yB7yu_-BtQHeyy4MifDjh3-TW0cgj3KY2EKTwZ4dKPdEBJ6fnVf3jbLyV-uvZQmk0v-QGcuCTBl10T8hQLMGa51GLVarkoJZ1dn3QEi41TBNHFq1H9kUZJ38AcRAV
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 24 Nov 2019 16:36:58 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "range": "test123!A1:Z999",
+          "majorDimension": "ROWS",
+          "values": [
+            [
+              "email",
+              "imię i nazwisko",
+              "termin płatności",
+              "okres",
+              "kwota",
+              "data wysyłki maila",
+              "dostarczono?",
+              "odczytano?",
+              "zaimportowano?",
+              "błędy"
+            ],
+            [
+              "example2@mail.com",
+              "test2",
+              "",
+              "2019-10",
+              "1",
+              "2019-10-15",
+              "",
+              "",
+              "NIE",
+              "Termin płatności nie może być puste, Powiadomienie jest nieprawidłowe"
+            ]
+          ]
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:36:58 GMT
+recorded_with: VCR 5.0.0

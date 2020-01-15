@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h4>
+      <b>
+        <%= I18n.t( 'notification_mailer.zus_for', period: @notification.period ) %>
+      </b>
+    </h4>
+    <p>
+      <%= I18n.t( 'notification_mailer.welcome' ) %>
+    </p>
+    <p>
+      <%= I18n.t( 'notification_mailer.intro', payment_deadline_on_date: @notification.payment_deadline_on ) %> (<%= I18n.l(@notification.payment_deadline_on, format: '%a') %>.) <%= I18n.t( 'notification_mailer.content', period: @notification.period ) %><br>
+      <%= I18n.t( 'notification_mailer.additional_info' ) %>
+    </p>
+    <p>
+      <%= I18n.t( 'notification_mailer.receiver' ) %><br>
+      <%= I18n.t( 'notification_mailer.zus' ) %><br>
+      <%= I18n.t( 'notification_mailer.address' ) %><br>
+      <%= I18n.t( 'notification_mailer.unnecessary' ) %><br>
+      <%= I18n.t( 'notification_mailer.account' ) %><br>
+      <%= I18n.t( 'notification_mailer.account_no' ) %><br>
+      <%= I18n.t( 'notification_mailer.ammount' ) %><br>
+      <%= I18n.t( 'notification_mailer.tax_amount', tax_amount: @notification.tax_amount ) %><br>
+      <%= I18n.t( 'notification_mailer.payment_title' ) %><br>
+      <%= I18n.t( 'notification_mailer.contribution_period', period: @notification.period ) %><br>
+      <%= I18n.t( 'notification_mailer.payment_deadline' ) %><br>
+      <%= @notification.payment_deadline_on %> (<%= I18n.l(@notification.payment_deadline_on, format: '%a') %>.)
+    </p>
+    <p>
+      <b>
+        <%= I18n.t( 'notification_mailer.important' ) %>
+      </b>
+      <%= I18n.t( 'notification_mailer.formula' ) %>
+    </p>
+    <p>
+      <%= I18n.t( 'notification_mailer.thanks' ) %><br>
+      <%= I18n.t( 'notification_mailer.team' ) %><br>
+      <%= I18n.t( 'notification_mailer.location' ) %><br>
+      <%= I18n.t( 'notification_mailer.court' ) %><br>
+      <%= I18n.t( 'notification_mailer.krs_nip' ) %><br>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1NzA2MTU1NDgsImlhdCI6MTU3MDYxNTQyOCwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.K8bGAaV2RRxg1VnCgJQcpP-D1ZR7oceGMytaK50eT1NwbxoQQ0g_iavQs9xwy5kpJXf_Zu4lMxIu1izB1eGDMjhgoYqhnOqtG3cqB5mNiqGtRA40_M6taoTSStvClgH0-bHw2eWGptWmWhrNndsR0AH-WbDdyREtz4a_jDKkBGvm9c1TYaZglOG2joq1CM8I5zKGgocIbbQsHa9MWolEDl_GoJYmx5avABXaqrzqFxUow7WDk0hxMK1iyqtV-J2bA0cxyCVK29FDvVw0j6Zx_laI5n9e0kIkpVkRRdclHFZLSSKSHNnOa0YTbv-t6KQHrdjCPQrMtMy5JOiFYT4tTg
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 09 Oct 2019 10:04:48 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl6bB8NElbhi89jm5Tje6x-mgrF2WKXBegEPpPc7ilDO5Iw6geE_swRac1BJuiDAGo8wRmY4C8U4xa3DUwH5N3jU0nZ_rbXS-iWsX4s8PYfWHJurStDb2fQ-rAg1zFqG",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2019 10:04:48 GMT
+- request:
+    method: get
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4/values/test_sheet
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.5 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Wed, 09 Oct 2019 10:04:48 GMT
+      Authorization:
+      - Bearer ya29.c.Kl6bB8NElbhi89jm5Tje6x-mgrF2WKXBegEPpPc7ilDO5Iw6geE_swRac1BJuiDAGo8wRmY4C8U4xa3DUwH5N3jU0nZ_rbXS-iWsX4s8PYfWHJurStDb2fQ-rAg1zFqG
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Date:
+      - Wed, 09 Oct 2019 10:04:48 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "range": "test_sheet!A1:Z1000",
+          "majorDimension": "ROWS"
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2019 10:04:49 GMT
+recorded_with: VCR 5.0.0

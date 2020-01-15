@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1Nzc4MzY4NjAsImlhdCI6MTU3NzgzNjc0MCwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.defQvXYoJef_jKz-pMn2UOvDcRKQ17N4yud-BWnwcJSl_GX58bohVheQhn0zqhQbkJdgFM0f7d5gFZUZsdmxjfz6U6cQrTKK0AVckca1S7-r0ak-smAyFWqu5lc-C-38dpdOixISE18hSTlHWB1IA9D8oiYQL9l8IRKtZPmK4NR-GjOV03iUF_9Y6bQciIxHKifKuZIEscJw3XDMYr-qthUxdscUw8-1f-QPACwz1MsVSsjbUVrX2oQN0NeZMJp8uHNiRh2EL3tGjp2BrQmBsVk2K9k1fLKmmW7vm_wAsIyq69T-aEXtRVqS1CqzYXGe6coGDhqlDDXZM12ufL7l3Q
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 12 Jan 2020 18:48:02 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": "invalid_grant",
+          "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."
+        }
+    http_version: 
+  recorded_at: Wed, 01 Jan 2020 00:00:00 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1Nzc4MzY4NjAsImlhdCI6MTU3NzgzNjc0MCwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.defQvXYoJef_jKz-pMn2UOvDcRKQ17N4yud-BWnwcJSl_GX58bohVheQhn0zqhQbkJdgFM0f7d5gFZUZsdmxjfz6U6cQrTKK0AVckca1S7-r0ak-smAyFWqu5lc-C-38dpdOixISE18hSTlHWB1IA9D8oiYQL9l8IRKtZPmK4NR-GjOV03iUF_9Y6bQciIxHKifKuZIEscJw3XDMYr-qthUxdscUw8-1f-QPACwz1MsVSsjbUVrX2oQN0NeZMJp8uHNiRh2EL3tGjp2BrQmBsVk2K9k1fLKmmW7vm_wAsIyq69T-aEXtRVqS1CqzYXGe6coGDhqlDDXZM12ufL7l3Q
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 12 Jan 2020 18:48:03 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": "invalid_grant",
+          "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."
+        }
+    http_version: 
+  recorded_at: Wed, 01 Jan 2020 00:00:00 GMT
+recorded_with: VCR 5.0.0

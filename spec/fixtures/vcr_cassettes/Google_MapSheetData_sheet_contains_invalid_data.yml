@@ -1,0 +1,251 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1NzQ2MTMzNjYsImlhdCI6MTU3NDYxMzI0Niwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.KfoQPW75_FPvwZzZFUwDNdEyGRS2yO7966TK1Uhr6OFNgs57XsBbYIQoYNdl3W6zQ7BJ0BWSAfTkqnTG79CD5FcxFchm1mFQNHFIZguIY-bGXQOJk1SFxwFoyMwmmyB0nFWsTM62mgys0Yk8z1tc2X3AKMqwenlh5Nedh80WmmWJxdiqvuMFlepvwSjU3dMg2o8UZuap2F7AEWxOa8IFCDVgrETWmjqwuVQsoz65gRoGZn0gXLqysC5R7A4yEMYVsNTKZwng4ASJ2qRcpGxrSZBFEkGklRunmhhq1sfTFyOcPhSt0wUqtcWuLkM5W7GE2KRIhQFKcy1tv5dYHxjXwg
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 24 Nov 2019 16:35:06 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl6yB-z2n76WexGAb5iZ64Si842IprdOPCC7OaatAXV7g3dhqF9CR_LyAG7UFZAevaHMX9xGhdAho9gQwCpc78cfEXtVx305EMANrb55RjLV2inOZB6AexsJuXGhIGT7",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:35:06 GMT
+- request:
+    method: get
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4/values/test123
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.5 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 24 Nov 2019 16:35:06 GMT
+      Authorization:
+      - Bearer ya29.c.Kl6yB-z2n76WexGAb5iZ64Si842IprdOPCC7OaatAXV7g3dhqF9CR_LyAG7UFZAevaHMX9xGhdAho9gQwCpc78cfEXtVx305EMANrb55RjLV2inOZB6AexsJuXGhIGT7
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 24 Nov 2019 16:35:06 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "range": "test123!A1:Z999",
+          "majorDimension": "ROWS",
+          "values": [
+            [
+              "email",
+              "imię i nazwisko",
+              "termin płatności",
+              "okres",
+              "kwota",
+              "data wysyłki maila",
+              "dostarczono?",
+              "odczytano?",
+              "zaimportowano?",
+              "błędy"
+            ],
+            [
+              "example2@mail.com",
+              "test2",
+              "",
+              "2019-10",
+              "1",
+              "2019-10-15"
+            ]
+          ]
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:35:06 GMT
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1NzQ2MTMzNjYsImlhdCI6MTU3NDYxMzI0Niwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.KfoQPW75_FPvwZzZFUwDNdEyGRS2yO7966TK1Uhr6OFNgs57XsBbYIQoYNdl3W6zQ7BJ0BWSAfTkqnTG79CD5FcxFchm1mFQNHFIZguIY-bGXQOJk1SFxwFoyMwmmyB0nFWsTM62mgys0Yk8z1tc2X3AKMqwenlh5Nedh80WmmWJxdiqvuMFlepvwSjU3dMg2o8UZuap2F7AEWxOa8IFCDVgrETWmjqwuVQsoz65gRoGZn0gXLqysC5R7A4yEMYVsNTKZwng4ASJ2qRcpGxrSZBFEkGklRunmhhq1sfTFyOcPhSt0wUqtcWuLkM5W7GE2KRIhQFKcy1tv5dYHxjXwg
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 24 Nov 2019 16:35:07 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl6yB3zgr9UiUlkzrXsqmU1aldQFjyWWw8k7NMhPk5CMEyTB_NzdO6OhRXKctOK8PCEPmqAqdiisN9c8z0nseo6PRLN5FpslJAj5m3XKi9cwXNkR-6Zzyi-mF95Nv8bR",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:35:07 GMT
+- request:
+    method: put
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4/values/test123!I2?valueInputOption=RAW
+    body:
+      encoding: UTF-8
+      string: '{"values":[["NIE","Termin płatności nie może być puste, Powiadomienie
+        jest nieprawidłowe"]]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.5 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 24 Nov 2019 16:35:07 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl6yB3zgr9UiUlkzrXsqmU1aldQFjyWWw8k7NMhPk5CMEyTB_NzdO6OhRXKctOK8PCEPmqAqdiisN9c8z0nseo6PRLN5FpslJAj5m3XKi9cwXNkR-6Zzyi-mF95Nv8bR
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 24 Nov 2019 16:35:07 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "spreadsheetId": "16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4",
+          "updatedRange": "test123!I2:J2",
+          "updatedRows": 1,
+          "updatedColumns": 2,
+          "updatedCells": 2
+        }
+    http_version: 
+  recorded_at: Sun, 24 Nov 2019 16:35:07 GMT
+recorded_with: VCR 5.0.0

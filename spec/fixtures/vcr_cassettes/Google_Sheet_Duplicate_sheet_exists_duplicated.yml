@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4:batchUpdate
+    body:
+      encoding: UTF-8
+      string: '{"requests":[{"duplicateSheet":{"insertSheetIndex":0,"newSheetName":"test_sheet_name_duplicate","sourceSheetId":"704988061"}}]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.6 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 12 Jan 2020 18:26:25 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl65B1iacRdUPHidQhrIAjMidcgPFiDFdhQn-rMLsBk-AaxoPNoRs_o2JlOqFDa5MWssgOi15Yi-8uUq0T_h6arZlwxd2ECxkorJdSVEaLfdbHUoISsABsc1dLX742I0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 12 Jan 2020 18:26:10 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "Invalid requests[0].duplicateSheet: A sheet with the name \"test_sheet_name_duplicate\" already exists. Please enter another name.",
+            "errors": [
+              {
+                "message": "Invalid requests[0].duplicateSheet: A sheet with the name \"test_sheet_name_duplicate\" already exists. Please enter another name.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT"
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 12 Jan 2020 18:26:25 GMT
+recorded_with: VCR 5.0.0

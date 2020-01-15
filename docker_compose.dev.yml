@@ -1,0 +1,7 @@
+postgres:
+  image: postgres:10.9
+  ports:
+    - 64320:5432
+  environment:
+    - POSTGRES_USER=docker
+    - POSTGRES_PASSWORD=docker

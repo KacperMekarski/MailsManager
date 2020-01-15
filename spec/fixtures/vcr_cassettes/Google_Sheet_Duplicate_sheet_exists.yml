@@ -1,0 +1,129 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1Nzg4NTMyOTYsImlhdCI6MTU3ODg1MzE3Niwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.TydvNqQ6DpHu3IfNZASDptQ-974RodRSp2V7L58PcJsosaN9RDDjh2Da7W97nYNvpg745ZbUO0QYLz-Zft_R9z3DQZHdBgnMAIkYGPhPfJaz3os2NosTst0fbANwhIxoArw7P-nkbd_J8IUW3NbCQdrVjZ5WjsoPlPZshFWf800_tc2t87Cgh0TMhRxAXXOfYKo9RTV4GpbOI58WASmU_nDihVHHMARyYFYQ0nAuZrRvJ__897DtXzh4pUAvdfPEiSI6ikVQXrSV54HGpkG1ywbTG58FjANBpbD_ahO0yuPgPfAo0qatbczEngT2uTDrASV9640s8056dqqp-J9PMQ
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 12 Jan 2020 18:20:21 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl65B1iacRdUPHidQhrIAjMidcgPFiDFdhQn-rMLsBk-AaxoPNoRs_o2JlOqFDa5MWssgOi15Yi-8uUq0T_h6arZlwxd2ECxkorJdSVEaLfdbHUoISsABsc1dLX742I0",
+          "expires_in": 3599,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Sun, 12 Jan 2020 18:20:36 GMT
+- request:
+    method: post
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4:batchUpdate
+    body:
+      encoding: UTF-8
+      string: '{"requests":[{"duplicateSheet":{"insertSheetIndex":0,"newSheetName":"test_sheet_name_duplicate","sourceSheetId":"704988061"}}]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.6 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 12 Jan 2020 18:20:36 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl65B1iacRdUPHidQhrIAjMidcgPFiDFdhQn-rMLsBk-AaxoPNoRs_o2JlOqFDa5MWssgOi15Yi-8uUq0T_h6arZlwxd2ECxkorJdSVEaLfdbHUoISsABsc1dLX742I0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 12 Jan 2020 18:20:22 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "spreadsheetId": "16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4",
+          "replies": [
+            {
+              "duplicateSheet": {
+                "properties": {
+                  "sheetId": 1593491830,
+                  "title": "test_sheet_name_duplicate",
+                  "index": 0,
+                  "sheetType": "GRID",
+                  "gridProperties": {
+                    "rowCount": 1001,
+                    "columnCount": 26
+                  }
+                }
+              }
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Sun, 12 Jan 2020 18:20:37 GMT
+recorded_with: VCR 5.0.0

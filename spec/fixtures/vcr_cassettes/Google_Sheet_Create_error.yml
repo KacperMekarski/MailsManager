@@ -1,0 +1,122 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1NzA2MTI4OTUsImlhdCI6MTU3MDYxMjc3NSwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.nGpvaSGRp6lDULV7CtiKAuIxJ43dcuG1aM1w43Edr5UDbn0O-TI0wL1arKYOC8dBR6wNIgHjF9UUD79WOddVBOgiTGRyEX_FuXV6VdaMEYjLmGFhsCxfhfvzdZa7-E9eVCQN1eZFsBHX9utMq4bAu0txl0f2SIi3lpBDYb_UzIa5lAsLpPULANVuSJz4Ssoz8yUnDkTRkvF423Ki4UjF_aOowddBxl_Z6orucqV110OeAfuEBcmHSFeYAqpFnNO2XF80r-0Io5sHDdilDXYWi7I8czzqHOpyfMzCy74FJItcPw1hzDOed6wM4wITbcTJE1e4OpbqT9PFdqb6pzJhog
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 09 Oct 2019 09:20:35 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl6bB0IRjwjyFgcXXESWP_uree6Rrrhn9gEUy3zO3dvFS9VMHd1i10Tbv2ooDUCny6x-Ep6Zgczr6zU9AFINBuWaHfVNBlSZgaIZyuBsMo9sxFSXhbBqOfvEjfeVD1Yq",
+          "expires_in": 3600,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2019 09:20:35 GMT
+- request:
+    method: post
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4:batchUpdate
+    body:
+      encoding: UTF-8
+      string: '{"requests":[{"addSheet":{"properties":{"index":0,"title":"2019-10-09"}}}]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.5 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Wed, 09 Oct 2019 09:20:35 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl6bB0IRjwjyFgcXXESWP_uree6Rrrhn9gEUy3zO3dvFS9VMHd1i10Tbv2ooDUCny6x-Ep6Zgczr6zU9AFINBuWaHfVNBlSZgaIZyuBsMo9sxFSXhbBqOfvEjfeVD1Yq
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Wed, 09 Oct 2019 09:20:35 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q048=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "Invalid requests[0].addSheet: A sheet with the name \"2019-10-09\" already exists. Please enter another name.",
+            "errors": [
+              {
+                "message": "Invalid requests[0].addSheet: A sheet with the name \"2019-10-09\" already exists. Please enter another name.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 09 Oct 2019 09:20:36 GMT
+recorded_with: VCR 5.0.0

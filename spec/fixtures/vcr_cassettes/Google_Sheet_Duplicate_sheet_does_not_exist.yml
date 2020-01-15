@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/oauth2/v4/token
+    body:
+      encoding: ASCII-8BIT
+      string: grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJkdXBvbWFpbDEyM0BxdWlja3N0YXJ0LTE1NjQ1MTExNDc2MjYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjQvdG9rZW4iLCJleHAiOjE1Nzg4NTM4MjAsImlhdCI6MTU3ODg1MzcwMCwic2NvcGUiOiJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NwcmVhZHNoZWV0cyJ9.bdKRfa1SVqmb8q0F-Ew1jATojbcN6i7n48E3x0d92ATeVd6xuKk24CNutiAiZ0r6z-ouHXJ6ODC5TUaOanrVUhICQ3mHdvM_VvzgvPDAVBMTpQc8yEBruaaGfhDlUTre90wBlczbV3W7uVd_3_8irwqk9daTAnjCjoxYAmPmAs0fVCIsRRxWoR0espFlpSh2jCKiQ9H_VpZiIz1MdrDpW2VKF9W1ve0eaCLxn8paQNSkG8JuU_up3_Aw9lPXDYRHVuGiFslBA9d4zHUIdCWHh6Kpq-z2zRDg1bMKl5RGpfCyRgkIGxsPUCo9PifPPOIzkdk3UsW7n6TTb7KAIAJeZg
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 12 Jan 2020 18:29:05 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token": "ya29.c.Kl65B2SPTksgnGqToomhtbmXJ9J-P8BzHavb9b7THtzXitinf07SgBa1cllfB_2JdGyrJbjHF0-pVwCHFTrK6Fx02S4ma7cDKHEd5dF2OrPKPAitWV6IyA6x4x7fmuF_",
+          "expires_in": 3599,
+          "token_type": "Bearer"
+        }
+    http_version: 
+  recorded_at: Sun, 12 Jan 2020 18:29:20 GMT
+- request:
+    method: post
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4:batchUpdate
+    body:
+      encoding: UTF-8
+      string: '{"requests":[{"duplicateSheet":{"insertSheetIndex":0,"newSheetName":"test_sheet_name_duplicates","sourceSheetId":"704988062"}}]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.6 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 12 Jan 2020 18:29:20 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl65B2SPTksgnGqToomhtbmXJ9J-P8BzHavb9b7THtzXitinf07SgBa1cllfB_2JdGyrJbjHF0-pVwCHFTrK6Fx02S4ma7cDKHEd5dF2OrPKPAitWV6IyA6x4x7fmuF_
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Sun, 12 Jan 2020 18:29:05 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "Invalid requests[0].duplicateSheet: No sheet with id: 704988062",
+            "errors": [
+              {
+                "message": "Invalid requests[0].duplicateSheet: No sheet with id: 704988062",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT"
+          }
+        }
+    http_version: 
+  recorded_at: Sun, 12 Jan 2020 18:29:21 GMT
+recorded_with: VCR 5.0.0

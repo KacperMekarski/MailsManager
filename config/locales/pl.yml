@@ -1,0 +1,24 @@
+pl:
+  sheet:
+    yes_text: "TAK"
+    no_text: "NIE"
+  activerecord:
+    models:
+      notification:
+        one: "Powiadomienie"
+        other: "Powiadomienia"
+    errors:
+      messages:
+        blank: "nie może być puste"
+        invalid: "jest nieprawidłowe"
+      models:
+        notification:
+          attributes:
+            customer:
+              taken: "ma juz powiadomienie w tym szablonie"
+    attributes:
+      notification:
+        payment_deadline_on: "Termin płatności"
+        customer: "Klient"
+      customer:
+        notifications: "Powiadomienie"

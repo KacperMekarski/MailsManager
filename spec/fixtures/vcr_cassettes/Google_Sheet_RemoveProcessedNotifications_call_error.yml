@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://sheets.googleapis.com/v4/spreadsheets/16EgIgm9iEjeYijWHT1D9KkWzCFqqcIWsrgy5EDGmsu4/values/not_existing_sheet!A2?valueInputOption=RAW
+    body:
+      encoding: UTF-8
+      string: '{"values":[["","","","","","","","","NIE","Tax amount nie może być
+        puste, Period nie może być puste, Termin płatności nie może być puste, Fullname
+        nie może być puste, Email nie może być puste, Email jest nieprawidłowe, Powiadomienie
+        jest nieprawidłowe"],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""],["","","","","","","","","",""]]}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.30.7 Mac OS X/10.12.6 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Tue, 07 Jan 2020 19:57:08 GMT
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer ya29.c.Kl65B4lZ3Odr0qgBCPOTyqDfPn3ocTO8iy2L91bmB-ggH7tgS1GYhtIyGVAgcrJ8b2fp9tsABiyQBb0yeSJkYT2Hfis_kyUWO5MsVe5gNiPbXvC9p4ewYxw3Ykv4wlgK
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Encoding:
+      - gzip
+      Date:
+      - Tue, 07 Jan 2020 19:57:08 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443";
+        ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443";
+        ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "Unable to parse range: not_existing_sheet!A2",
+            "errors": [
+              {
+                "message": "Unable to parse range: not_existing_sheet!A2",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT"
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 07 Jan 2020 19:57:08 GMT
+recorded_with: VCR 5.0.0

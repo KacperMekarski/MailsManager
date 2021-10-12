@@ -11,7 +11,7 @@ gem 'google-api-client', '~> 0.30.7'
 gem 'googleauth'
 gem 'paper_trail'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 gem 'wisper'
 gem 'whenever', require: false
